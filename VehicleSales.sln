@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleSales.Web", "VehicleSales.Web\VehicleSales.Web.csproj", "{2F052CA8-3C66-47F8-9868-DADFD921B482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleSales.Application", "VehicleSales.Application\VehicleSales.Application.csproj", "{C604A383-84C3-4AD4-B144-BA96E867CF07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleSales.Infrastructure", "VehicleSales.Infrastructure\VehicleSales.Infrastructure.csproj", "{411D4D00-5227-487A-8C0E-1D15FA9D0DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleSales.Domain", "VehicleSales.Domain\VehicleSales.Domain.csproj", "{2C7D8A3A-7184-42A8-9425-A53AD766751C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F052CA8-3C66-47F8-9868-DADFD921B482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F052CA8-3C66-47F8-9868-DADFD921B482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F052CA8-3C66-47F8-9868-DADFD921B482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F052CA8-3C66-47F8-9868-DADFD921B482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C604A383-84C3-4AD4-B144-BA96E867CF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C604A383-84C3-4AD4-B144-BA96E867CF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C604A383-84C3-4AD4-B144-BA96E867CF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C604A383-84C3-4AD4-B144-BA96E867CF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411D4D00-5227-487A-8C0E-1D15FA9D0DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411D4D00-5227-487A-8C0E-1D15FA9D0DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411D4D00-5227-487A-8C0E-1D15FA9D0DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411D4D00-5227-487A-8C0E-1D15FA9D0DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7D8A3A-7184-42A8-9425-A53AD766751C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7D8A3A-7184-42A8-9425-A53AD766751C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7D8A3A-7184-42A8-9425-A53AD766751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7D8A3A-7184-42A8-9425-A53AD766751C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
