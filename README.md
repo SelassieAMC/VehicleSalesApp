@@ -1,5 +1,7 @@
 # Vehicle Sales App
 
+![image](https://user-images.githubusercontent.com/14059802/159384157-a11e4b61-3bb5-4c4e-92ea-1ea4a2110ba1.png)
+
 This project use the following frameworks, libraries and tools:
 
 - .Net 6.0
