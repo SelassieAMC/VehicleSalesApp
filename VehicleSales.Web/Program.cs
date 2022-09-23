@@ -26,8 +26,6 @@ services.AddCors(opts =>
     });
 });
 
-
-
 var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddInfrastructure(connectionString);
 
@@ -50,7 +48,10 @@ app.UseCors(corsPolicyName);
 using (var serviceScope = app.Services?.GetService<IServiceScopeFactory>()?.CreateScope())
 {
     var context = serviceScope?.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    context?.Database.Migrate();
+    if(context is not null && !context.Database.IsInMemory())
+    {
+        context?.Database.Migrate();
+    }
 }
 
 app.MapControllerRoute(

@@ -10,7 +10,7 @@ namespace VehicleSales.Infrastructure
         public static void AddInfrastructure(this IServiceCollection services, string connectionString)
         {
             services.AddScoped<IVehicleSaleRepository, VehicleSaleRepository>();
-            services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(x => x.UseInMemoryDatabase(connectionString));
         }
     }
 }
