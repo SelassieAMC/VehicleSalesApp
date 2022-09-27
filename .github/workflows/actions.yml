@@ -26,19 +26,19 @@ jobs:
       uses: hashicorp/setup-terraform@v2    
 
     - name: Terraform Init
-      working-directory: '../Deployment'
+      working-directory: 'Deployment'
       run: terraform init
 
     - name: Terraform Validate
-      working-directory: '../Deployment'
+      working-directory: 'Deployment'
       run: terraform validate -no-color
 
     - name: Terraform Plan
-      working-directory: '../Deployment'
+      working-directory: '.Deployment'
       run: terraform plan -no-color
       continue-on-error: true  
         
     - name: Terraform Apply
-      working-directory: '../Deployment'
+      working-directory: 'Deployment'
       run: terraform apply -no-color
         
