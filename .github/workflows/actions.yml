@@ -27,19 +27,19 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: 'Deployment'
+        working-directory: '../Deployment'
 
     - name: Terraform Validate
       uses: hashicorp/terraform-github-actions/validate@v0.3.7
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: 'Deployment'     
+        working-directory: '../Deployment'     
         
     - name: Terraform Apply
       uses: hashicorp/terraform-github-actions/apply@v0.4.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: 'Deployment'
+        working-directory: '../Deployment'
         
