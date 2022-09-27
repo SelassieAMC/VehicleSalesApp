@@ -40,6 +40,5 @@ jobs:
         
     - name: Terraform Apply
       working-directory: '../Deployment'
-      uses: hashicorp/terraform-github-actions@master
       run: terraform apply -no-color
         
