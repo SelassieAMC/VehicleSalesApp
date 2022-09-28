@@ -50,7 +50,7 @@ jobs:
         path: build
     
     - name: Generate deployment package
-      run: zip -r deploy.zip build/*.*
+      run: zip -r deploy.zip build/*
   
     - name: Deploy to AWS Beanstalk
       id: deploy-to-beanstalk
