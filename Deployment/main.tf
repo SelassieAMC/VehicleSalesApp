@@ -29,4 +29,5 @@ resource "aws_elastic_beanstalk_application" "sampleapp" {
 resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   name                = "default_env"
   application         = aws_elastic_beanstalk_application.sampleapp.name
+  solutionStackName   = "64bit Amazon Linux 2 v2.3.5 running .NET Core"
 }
