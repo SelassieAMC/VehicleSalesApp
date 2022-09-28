@@ -1,4 +1,4 @@
-name: .NET
+name: Build and publish artifact
 
 on:
   push:
@@ -8,20 +8,27 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v3.5.0
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
-      run: dotnet build
-    - name: Upload a Build Artifact
+      run: dotnet build --configuration Release --no-restore
+
+    - name: dotnet publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      
+    - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3.1.0
+      with:
+        name: .net-app
+        path: ${{env.DOTNET_ROOT}}/myapp
