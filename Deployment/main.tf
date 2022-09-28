@@ -3,7 +3,7 @@ terraform {
     organization = "TrainingGA"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "VehicleSalesApp"
     }
   }
 
