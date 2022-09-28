@@ -52,7 +52,7 @@ jobs:
     - name: Generate deployment package
       run: |
         cd build
-        zip -r deploy.zip
+        zip -r ../deploy.zip .
   
     - name: Deploy to AWS Beanstalk
       id: deploy-to-beanstalk
