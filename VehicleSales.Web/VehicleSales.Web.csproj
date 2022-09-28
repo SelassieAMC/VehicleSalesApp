@@ -12,6 +12,7 @@
         <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>10.0</LangVersion>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     </PropertyGroup>
 
     <ItemGroup>
