@@ -47,7 +47,7 @@ jobs:
       uses: actions/download-artifact@master
       with:
         name: build-package
-        path: ./
+        path: build
   
     - name: Deploy to AWS Beanstalk
       id: deploy-to-beanstalk
