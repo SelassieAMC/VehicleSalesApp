@@ -48,6 +48,9 @@ jobs:
       with:
         name: build-package
         path: build
+    
+    - name: Generate deployment package
+      run: zip -r deploy.zip build
   
     - name: Deploy to AWS Beanstalk
       id: deploy-to-beanstalk
@@ -60,4 +63,4 @@ jobs:
         environment_name: my-training-environment
         version_label: 12345
         region: us-east-1
-        deployment_package: build
+        deployment_package: deploy.zip
