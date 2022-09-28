@@ -13,24 +13,24 @@ jobs:
       name: 'Production'
       url: ${{ my-training-environment.eba-qm43axes.us-east-1.elasticbeanstalk.com }}
 
-  steps:
-  - name: Checkout Repo
-    uses: actions/checkout@v3
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
 
-  - name: Download artifact
-    uses: actions/download-artifact@v2
-    with:
-      name: .net-app
- 
-  - name: Deploy to AWS Beanstalk
-    id: deploy-to-beanstalk
-    uses: einaregilsson/beanstalk-deploy@v20
-    with:
-      aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      aws_session_token: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      application_name: SampleApp
-      environment_name: my-training-environment
-      version_label: 12345
-      region: us-east-1
-      deployment_package: .
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: .net-app
+  
+    - name: Deploy to AWS Beanstalk
+      id: deploy-to-beanstalk
+      uses: einaregilsson/beanstalk-deploy@v20
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_session_token: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: SampleApp
+        environment_name: my-training-environment
+        version_label: 12345
+        region: us-east-1
+        deployment_package: .
