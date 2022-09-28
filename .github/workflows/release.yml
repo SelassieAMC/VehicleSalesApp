@@ -11,8 +11,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ my-training-environment.eba-qm43axes.us-east-1.elasticbeanstalk.com }}
-
+      
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v3
